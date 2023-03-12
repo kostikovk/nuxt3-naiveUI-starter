@@ -1,41 +1,22 @@
 <template>
-  <div>
-    <NProviders :config-provider="configProvider" inline-theme-disabled>
-      <NuxtLayout>
-        <div class="container">
-          <header style="padding: 20px 0">
-            <NH1 prefix="bar" type="success">
-              <NText type="primary"> Pages </NText>
-            </NH1>
-            <nav>
-              <NuxtLink
-                v-for="{ path, name } in $router.getRoutes()"
-                v-slot="{ navigate }"
-                :key="path"
-                :to="path"
-                style="margin-right: 10px; text-decoration: none"
-              >
-                <NButton @click="navigate">
-                  {{ (name as string).replaceAll("-", " ").toUpperCase() }}
-                </NButton>
-              </NuxtLink>
-            </nav>
-          </header>
+  <app-providers :config-provider="configProvider">
+    <n-global-style />
 
-          <NuxtPage />
-        </div>
-      </NuxtLayout>
-    </NProviders>
-  </div>
+    <nuxt-layout name="default">
+      <nuxt-page />
+    </nuxt-layout>
+  </app-providers>
 </template>
 
 <script setup lang="ts">
-import { lightTheme, ConfigProviderProps, NButton, NH1, NText } from "naive-ui";
-import NProviders from "~~/components/functional/NProviders";
+import { NGlobalStyle, ConfigProviderProps, darkTheme } from "naive-ui";
+import AppProviders from "~~/components/functional/AppProviders";
+import { useTheme } from "~~/composables/useTheme";
 
+const { isDark } = useTheme();
 const configProvider = computed<ConfigProviderProps>(() => ({
   inlineThemeDisabled: true,
-  theme: lightTheme,
+  theme: isDark.value ? darkTheme : null,
 }));
 </script>
 

@@ -4,3 +4,9 @@
 
 // layout
 @forward "./layout";
+
+body {
+  --header-height: 35px;
+
+  overflow: hidden;
+}

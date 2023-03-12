@@ -1,5 +1,5 @@
 <template>
-  <section style="border: 1px solid #999; padding: 20px">
+  <section style="border: 1px solid #999">
     <n-h2>
       <n-text type="info"> Typography </n-text>
     </n-h2>

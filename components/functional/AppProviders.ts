@@ -12,11 +12,8 @@ type Props = {
   configProvider?: ConfigProviderProps;
 };
 
-const NProviders: FunctionalComponent<Props> = (
-  { configProvider },
-  { slots }
-) => {
-  return h(NConfigProvider, configProvider, () =>
+const NProviders: FunctionalComponent<Props> = (props, { slots }) => {
+  return h(NConfigProvider, props.configProvider, () =>
     h(NMessageProvider, null, () =>
       h(NNotificationProvider, null, () =>
         h(NDialogProvider, null, () =>
