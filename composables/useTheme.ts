@@ -1,5 +1,7 @@
 import { useState } from "#app";
-import { useOsTheme } from "naive-ui";
+import { computed } from "vue";
+import { useOsTheme, darkTheme } from "naive-ui";
+
 type Theme = "light" | "dark";
 
 export const useTheme = () => {
@@ -9,6 +11,7 @@ export const useTheme = () => {
   );
 
   const isDark = computed(() => activeTheme.value === "dark");
+  const naiveTheme = computed(() => (isDark.value ? darkTheme : null));
 
   const setTheme = (value: Theme) => {
     activeTheme.value = value;
@@ -18,5 +21,5 @@ export const useTheme = () => {
   const toggleTheme = () =>
     isDark.value ? setTheme("light") : setTheme("dark");
 
-  return { toggleTheme, isDark, activeTheme };
+  return { toggleTheme, isDark, activeTheme, naiveTheme };
 };

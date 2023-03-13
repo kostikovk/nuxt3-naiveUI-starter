@@ -104,7 +104,7 @@ const menuOptions: MenuOption[] = [
   {
     label: "Github",
     key: "github",
-    href: "https://github.com/KosKosovuch",
+    href: "",
     icon: renderIcon(LogoGithubIcon),
   },
 ];
@@ -133,9 +133,3 @@ function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) });
 }
 </script>
-
-<style lang="scss" scoped>
-.n-layout-content {
-  height: 100%;
-}
-</style>
