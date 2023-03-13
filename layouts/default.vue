@@ -104,7 +104,7 @@ const menuOptions: MenuOption[] = [
   {
     label: "Github",
     key: "github",
-    href: "",
+    href: "https://github.com/KosKosovuch/nuxt3-naiveUI-starter#nuxt-3--naiveui--codestyle-starter",
     icon: renderIcon(LogoGithubIcon),
   },
 ];

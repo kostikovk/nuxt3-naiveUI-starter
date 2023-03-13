@@ -4,14 +4,38 @@ Look at the [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) and [Na
 
 ## Setup
 
-Make sure to install the dependencies:
-
 ```bash
+# 1. clone repo
+git clone https://github.com/KosKosovuch/nuxt3-naiveUI-starter.git
+
+# 2. Rename folder
+mv nuxt3-naiveUI-starter my-project
+
+# 3. Go to folder
+cd my-project
+
+# 4. remove .git
+rm -rf .git
+
+# 5. Init git
+git init
+
 # .nvmrc
 nvm use
 
 # install dependencies
 npm i
+
+# 6. Change branch
+git branch -M main
+
+# 7. Add first commit
+git add .
+git commit -m "init project"
+
+# 8. Add remote
+git remote add origin ...
+git push -u origin main
 ```
 
 ## Tools and commands:
