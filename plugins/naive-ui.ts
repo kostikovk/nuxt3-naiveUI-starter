@@ -6,24 +6,28 @@ export default defineNuxtPlugin((nuxtApp) => {
     const { collect } = setup(nuxtApp.vueApp)
     const originalRenderMeta = nuxtApp.ssrContext?.renderMeta
 
-    nuxtApp.ssrContext!.renderMeta = () => {
-      if (!originalRenderMeta) {
-        return {
-          headTags: collect()
-        }
-      }
-      const originalMeta = originalRenderMeta()
-      if ('then' in originalMeta) {
-        return originalMeta.then((resolvedOriginalMeta) => {
+    if (nuxtApp.ssrContext) {
+      nuxtApp.ssrContext.renderMeta = () => {
+        if (!originalRenderMeta) {
           return {
-            ...resolvedOriginalMeta,
-            headTags: resolvedOriginalMeta.headTags + collect()
+            headTags: collect()
           }
-        })
-      } else {
-        return {
-          ...originalMeta,
-          headTags: originalMeta.headTags + collect()
+        }
+
+        const originalMeta = originalRenderMeta()
+
+        if ('then' in originalMeta) {
+          return originalMeta.then((resolvedOriginalMeta) => {
+            return {
+              ...resolvedOriginalMeta,
+              headTags: resolvedOriginalMeta.headTags + collect()
+            }
+          })
+        } else {
+          return {
+            ...originalMeta,
+            headTags: originalMeta.headTags + collect()
+          }
         }
       }
     }

@@ -8,12 +8,8 @@ import {
   ConfigProviderProps
 } from 'naive-ui'
 
-type Props = {
-  configProvider?: ConfigProviderProps
-}
-
-const NProviders: FunctionalComponent<Props> = (props, { slots }) => {
-  return h(NConfigProvider, props.configProvider, () =>
+const AppProviders: FunctionalComponent<ConfigProviderProps> = (props, { slots }) => {
+  return h(NConfigProvider, props, () =>
     h(NMessageProvider, null, () =>
       h(NNotificationProvider, null, () =>
         h(NDialogProvider, null, () => h(NLoadingBarProvider, null, () => slots.default?.()))
@@ -22,11 +18,4 @@ const NProviders: FunctionalComponent<Props> = (props, { slots }) => {
   )
 }
 
-NProviders.props = {
-  configProvider: {
-    type: Object as PropType<ConfigProviderProps>,
-    default: () => ({})
-  }
-}
-
-export default NProviders
+export default AppProviders
