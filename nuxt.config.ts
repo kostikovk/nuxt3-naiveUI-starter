@@ -1,37 +1,39 @@
-import eslintPlugin from "vite-plugin-eslint";
-import stylelintPlugin from "vite-plugin-stylelint";
+import eslintPlugin from 'vite-plugin-eslint'
+import stylelintPlugin from 'vite-plugin-stylelint'
 
-const isDev = process.env.NODE_ENV === "development";
-const isProd = process.env.NODE_ENV === "production";
+const isDev = process.env.NODE_ENV === 'development'
+const isProd = process.env.NODE_ENV === 'production'
 
 export default defineNuxtConfig({
+  typescript: {
+    strict: true
+  },
+
   // https://nuxt.com/docs/api/configuration/nuxt-config#css
-  css: ["@/assets/styles/main.scss"],
+  css: ['@/assets/styles/main.scss'],
 
   // https://nuxt.com/docs/api/configuration/nuxt-config#build
   build: {
     transpile: isProd
-      ? ["naive-ui", "vueuc", "@css-render/vue3-ssr", "@juggle/resize-observer"]
-      : ["@juggle/resize-observer"],
+      ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer']
+      : ['@juggle/resize-observer']
   },
 
   // https://nuxt.com/docs/api/configuration/nuxt-config#vite
   vite: {
     optimizeDeps: {
-      include: isDev
-        ? ["naive-ui", "vueuc", "date-fns-tz/esm/formatInTimeZone"]
-        : [],
+      include: isDev ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone'] : []
     },
 
     css: {
       preprocessorOptions: {
         // https://nuxt.com/docs/getting-started/assets#global-styles-imports
         scss: {
-          additionalData: `@use "@/assets/styles/global.scss" as *;`,
-        },
-      },
+          additionalData: '@use "@/assets/styles/global.scss" as *;'
+        }
+      }
     },
 
-    plugins: isDev ? [eslintPlugin(), stylelintPlugin()] : [],
-  },
-});
+    plugins: isDev ? [eslintPlugin(), stylelintPlugin()] : []
+  }
+})

@@ -139,8 +139,8 @@ npm run lint:fix
 ```scss
 // assets/styles/main.scss
 
-@forward "vfonts/Lato.css";
-@forward "vfonts/FiraCode.css";
+@forward 'vfonts/Lato.css';
+@forward 'vfonts/FiraCode.css';
 ```
 
 2. **Icons** [@vicons/ionicons5
@@ -148,9 +148,12 @@ npm run lint:fix
 
 ```html
 <!-- Usage -->
-<script lang="ts" setup>
-  import { CubeOutline as CubeOutlineIcon } from "@vicons/ionicons5";
-  import { NIcon } from "naive-ui";
+<script
+  lang="ts"
+  setup
+>
+  import { CubeOutline as CubeOutlineIcon } from '@vicons/ionicons5'
+  import { NIcon } from 'naive-ui'
 </script>
 
 <template>
@@ -165,31 +168,30 @@ npm run lint:fix
 ```ts
 // composables/useTheme.ts
 
-import { useState } from "#app";
-import { computed } from "vue";
-import { useOsTheme, darkTheme } from "naive-ui";
+import { useState } from '#app'
+import { computed } from 'vue'
+import { useOsTheme, darkTheme } from 'naive-ui'
 
-type Theme = "light" | "dark";
+type Theme = 'light' | 'dark'
 
 export const useTheme = () => {
-  const themeCookie = useCookie<Theme>("theme");
-  const activeTheme = useState<Theme>("theme", () =>
-    themeCookie.value ? themeCookie.value : useOsTheme().value ?? "light"
-  );
+  const themeCookie = useCookie<Theme>('theme')
+  const activeTheme = useState<Theme>('theme', () =>
+    themeCookie.value ? themeCookie.value : useOsTheme().value ?? 'light'
+  )
 
-  const isDark = computed(() => activeTheme.value === "dark");
-  const naiveTheme = computed(() => (isDark.value ? darkTheme : null));
+  const isDark = computed(() => activeTheme.value === 'dark')
+  const naiveTheme = computed(() => (isDark.value ? darkTheme : null))
 
   const setTheme = (value: Theme) => {
-    activeTheme.value = value;
-    themeCookie.value = value;
-  };
+    activeTheme.value = value
+    themeCookie.value = value
+  }
 
-  const toggleTheme = () =>
-    isDark.value ? setTheme("light") : setTheme("dark");
+  const toggleTheme = () => (isDark.value ? setTheme('light') : setTheme('dark'))
 
-  return { toggleTheme, isDark, activeTheme, naiveTheme };
-};
+  return { toggleTheme, isDark, activeTheme, naiveTheme }
+}
 ```
 
 ```html
@@ -204,16 +206,19 @@ export const useTheme = () => {
   </app-providers>
 </template>
 
-<script setup lang="ts">
-  import { NGlobalStyle, ConfigProviderProps } from "naive-ui";
-  import AppProviders from "~~/components/functional/AppProviders";
-  import { useTheme } from "~~/composables/useTheme";
+<script
+  setup
+  lang="ts"
+>
+  import { NGlobalStyle, ConfigProviderProps } from 'naive-ui'
+  import AppProviders from '~~/components/functional/AppProviders'
+  import { useTheme } from '~~/composables/useTheme'
 
-  const { naiveTheme } = useTheme();
+  const { naiveTheme } = useTheme()
   const configProvider = computed<ConfigProviderProps>(() => ({
     inlineThemeDisabled: true,
-    theme: naiveTheme.value,
-  }));
+    theme: naiveTheme.value
+  }))
 </script>
 ```
 

@@ -1,12 +1,23 @@
 <template>
   <n-layout-header bordered>
     <div class="container">
-      <n-space align="center" justify="space-between">
-        <n-menu :value="fullPath" mode="horizontal" :options="menuOptions" />
+      <n-space
+        align="center"
+        justify="space-between"
+      >
+        <n-menu
+          :value="fullPath"
+          mode="horizontal"
+          :options="menuOptions"
+        />
 
         <n-space align="center">
           <!-- Theme Switcher -->
-          <n-switch :round="false" :value="isDark" @update-value="toggleTheme">
+          <n-switch
+            :round="false"
+            :value="isDark"
+            @update-value="toggleTheme"
+          >
             <template #checked-icon>
               <n-icon :component="MoonOutlineIcon" />
             </template>
@@ -20,7 +31,12 @@
             href="https://github.com/KosKosovuch/nuxt3-naiveUI-starter"
             target="blank"
           >
-            <n-button type="primary" quaternary circle size="large">
+            <n-button
+              type="primary"
+              quaternary
+              circle
+              size="large"
+            >
               <n-icon size="large">
                 <logo-github-icon />
               </n-icon>
@@ -33,68 +49,60 @@
 </template>
 
 <script setup lang="ts">
-import {
-  NLayoutHeader,
-  NIcon,
-  NSwitch,
-  NButton,
-  NSpace,
-  NA,
-  NMenu,
-} from "naive-ui";
-import {
-  LogoGithub as LogoGithubIcon,
-  SunnyOutline as SunnyOutlineIcon,
-  MoonOutline as MoonOutlineIcon,
-  BookOutline as BookIcon,
-  HomeOutline as HomeIcon,
-} from "@vicons/ionicons5";
-import { NuxtLink } from "#components";
+  import { NLayoutHeader, NIcon, NSwitch, NButton, NSpace, NA, NMenu } from 'naive-ui'
+  import {
+    LogoGithub as LogoGithubIcon,
+    SunnyOutline as SunnyOutlineIcon,
+    MoonOutline as MoonOutlineIcon,
+    BookOutline as BookIcon,
+    HomeOutline as HomeIcon
+  } from '@vicons/ionicons5'
+  import { NuxtLink } from '#components'
 
-import { useTheme } from "@/composables/useTheme";
+  import { useTheme } from '@/composables/useTheme'
 
-const { isDark, toggleTheme } = useTheme();
+  const { isDark, toggleTheme } = useTheme()
 
-const fullPath = computed(() => useRoute().fullPath);
+  const fullPath = computed(() => useRoute().fullPath)
 
-function renderIcon(icon: Component) {
-  return () => h(NIcon, null, { default: () => h(icon) });
-}
+  function renderIcon(icon: Component) {
+    return () => h(NIcon, null, { default: () => h(icon) })
+  }
 
-const menuOptions = [
-  {
-    label: () =>
-      h(
-        NuxtLink,
-        {
-          to: "/",
-        },
-        () => "Home"
-      ),
-    key: "/",
-    icon: renderIcon(HomeIcon),
-  },
-  {
-    label: () =>
-      h(
-        NuxtLink,
-        {
-          to: "/components",
-        },
-        () => "Components"
-      ),
-    key: "/components",
-    icon: renderIcon(BookIcon),
-  },
-];
+  const menuOptions = [
+    {
+      label: () =>
+        h(
+          NuxtLink,
+          {
+            to: '/'
+          },
+          () => 'Home'
+        ),
+      key: '/',
+      icon: renderIcon(HomeIcon)
+    },
+    {
+      label: () =>
+        h(
+          NuxtLink,
+          {
+            to: '/components'
+          },
+          () => 'Components'
+        ),
+      key: '/components',
+      icon: renderIcon(BookIcon)
+    }
+  ]
 </script>
 
 <style lang="scss" scoped>
-.n-layout-header {
-  position: static;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 16px 0;
-}
+  .n-layout-header {
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 16px 0;
+  }
 </style>
