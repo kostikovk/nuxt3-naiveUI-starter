@@ -10,5 +10,7 @@ module.exports = {
   },
   extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
   plugins: [],
-  rules: {},
+  rules: {
+    "vue/no-multiple-template-root": "off",
+  },
 };
