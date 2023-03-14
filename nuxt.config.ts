@@ -1,3 +1,6 @@
+import eslintPlugin from "vite-plugin-eslint";
+import stylelintPlugin from "vite-plugin-stylelint";
+
 const isDev = process.env.NODE_ENV === "development";
 const isProd = process.env.NODE_ENV === "production";
 
@@ -28,5 +31,7 @@ export default defineNuxtConfig({
         },
       },
     },
+
+    plugins: isDev ? [eslintPlugin(), stylelintPlugin()] : [],
   },
 });
