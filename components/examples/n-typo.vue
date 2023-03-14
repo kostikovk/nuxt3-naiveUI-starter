@@ -8,15 +8,15 @@
     <n-text type="info"> Headings </n-text>
   </n-h3>
 
-  <div style="padding-left: 24px; position: relative">
+  <div style="position: relative; padding-left: 24px">
     <div
       style="
         position: absolute;
-        left: 0;
         top: 0;
         bottom: 0;
+        left: 0;
         width: 24px;
-        background-color: rgba(128, 128, 128, 0.5);
+        background-color: rgb(128 128 128 / 50%);
       "
     />
     <n-h1>

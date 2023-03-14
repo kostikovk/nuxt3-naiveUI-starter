@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { NGlobalStyle, ConfigProviderProps } from "naive-ui";
-import AppProviders from "~~/components/functional/AppProviders";
+import AppProviders from "~~/components/functional/app-providers";
 import { useTheme } from "~~/composables/useTheme";
 
 useHead({ title: "Nuxt 3 + NaiveUI Starter" });

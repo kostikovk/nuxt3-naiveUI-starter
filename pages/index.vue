@@ -30,5 +30,3 @@ import { NH1, NH2, NText, NP, NSpace, NOl, NLi } from "naive-ui";
 
 const tools = ["ESLint", "Stylelint", "Prettier", "Husky", "Lint-staged"];
 </script>
-
-<style lang="scss" scoped></style>

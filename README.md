@@ -1,5 +1,7 @@
 # Nuxt 3 + NaiveUI + Codestyle Starter
 
+## [Live](https://nuxt3-naive-ui-starter.netlify.app/)
+
 Look at the [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) and [Naive UI](https://www.naiveui.com/en-US/dark/docs/introduction) documentation to learn more.
 
 ## Setup
@@ -23,25 +25,35 @@ git init
 # 6. Use node version. If you don't have it, install it https://github.com/nvm-sh/nvm
 nvm use
 
-# install dependencies
+# 7. install dependencies
 npm i
 
-# 6. Change branch
+# 8. Change branch
 git branch -M main
 
-# 7. Add first commit
+# 9. Add first commit
 git add .
 git commit -m "init project"
 
-# 8. Add remote and push
+# 10. Add remote and push
 git remote add origin ...
 git push -u origin main
 ```
 
-## VSCode
+## VSCode `.vscode/settings.json`
 
 ```json
-// settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": ["{**/*, *}.{js, ts, jsx, tsx, html, vue}"],
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"]
+}
+```
+
+```json
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,

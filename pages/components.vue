@@ -1,20 +1,13 @@
 <template>
-  <div>
-    <NH1>
-      <NText type="primary"> Naive UI </NText>
-    </NH1>
-
-    <TypographyComponents />
-
-    <ProvidedComponents />
-  </div>
+  <n-h1>
+    <NText type="primary"> Naive UI </NText>
+  </n-h1>
+  <n-typo />
+  <n-providered />
 </template>
 
 <script setup lang="ts">
 import { NH1, NText } from "naive-ui";
-
-import ProvidedComponents from "~~/components/examples/ProvidedComponents.vue";
-import TypographyComponents from "~~/components/examples/TypographyComponents.vue";
+import NProvidered from "~~/components/examples/n-providered.vue";
+import NTypo from "~~/components/examples/n-typo.vue";
 </script>
-
-<style scoped></style>
