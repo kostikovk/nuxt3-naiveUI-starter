@@ -1,10 +1,4 @@
-// fonts
-@forward "vfonts/Lato.css";
-@forward "vfonts/FiraCode.css";
-
-// layout
+// https://nuxt.com/docs/api/configuration/nuxt-config#css
+@forward "./fonts";
+@forward "./generic";
 @forward "./layout";
-
-body {
-  overflow: hidden;
-}

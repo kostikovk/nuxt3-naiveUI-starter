@@ -1,0 +1,21 @@
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin overflow($x: hidden, $y: auto) {
+  overflow: $x $y;
+
+  @if $x != hidden or $y != hidden {
+    -webkit-overflow-scrolling: touch;
+  }
+}

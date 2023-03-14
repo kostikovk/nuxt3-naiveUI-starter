@@ -1,0 +1,5 @@
+@use "./mixins" as *;
+
+body {
+  @include overflow(hidden, hidden);
+}

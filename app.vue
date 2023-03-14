@@ -13,6 +13,8 @@ import { NGlobalStyle, ConfigProviderProps } from "naive-ui";
 import AppProviders from "~~/components/functional/AppProviders";
 import { useTheme } from "~~/composables/useTheme";
 
+useHead({ title: "Nuxt 3 + NaiveUI Starter" });
+
 const { naiveTheme } = useTheme();
 const configProvider = computed<ConfigProviderProps>(() => ({
   inlineThemeDisabled: true,

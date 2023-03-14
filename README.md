@@ -20,7 +20,7 @@ rm -rf .git
 # 5. Init git
 git init
 
-# .nvmrc
+# 6. Use node version. If you don't have it, install it https://github.com/nvm-sh/nvm
 nvm use
 
 # install dependencies
@@ -33,9 +33,23 @@ git branch -M main
 git add .
 git commit -m "init project"
 
-# 8. Add remote
+# 8. Add remote and push
 git remote add origin ...
 git push -u origin main
+```
+
+## VSCode
+
+```json
+// settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": ["{**/*, *}.{js, ts, jsx, tsx, html, vue}"],
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"]
+}
 ```
 
 ## Tools and commands:
@@ -43,8 +57,11 @@ git push -u origin main
 1. **ESLint**
 
 ```bash
-# check .ts,.vue
-npm run lint:js
+# check .ts,.js,.vue
+npm run lint:eslint
+
+# fix
+npm run fix:eslint
 ```
 
 2. **Prettier**
@@ -52,6 +69,9 @@ npm run lint:js
 ```bash
 # check .
 npm run lint:prettier
+
+# fix
+npm run fix:prettier
 ```
 
 3. **Stylelint**
@@ -59,6 +79,9 @@ npm run lint:prettier
 ```bash
 # check .scss,.vue
 npm run lint:stylelint
+
+# fix
+npm run fix:stylelint
 ```
 
 4. **Check All**
@@ -70,7 +93,7 @@ npm run lint
 5. **Fix All**
 
 ```bash
-npm run lint:fix
+npm run fix
 ```
 
 6. **Commitizen**. Using [git-cz](https://github.com/streamich/git-cz)
@@ -94,7 +117,7 @@ npm run lint:fix
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run build
+# npm run build
 ```
 
 ## UI
@@ -170,7 +193,6 @@ export const useTheme = () => {
 </template>
 
 <script setup lang="ts">
-  import { computed } from "vue";
   import { NGlobalStyle, ConfigProviderProps } from "naive-ui";
   import AppProviders from "~~/components/functional/AppProviders";
   import { useTheme } from "~~/composables/useTheme";

@@ -1,4 +1,6 @@
 module.exports = {
+  plugins: ["stylelint-prettier", "stylelint-scss"],
+
   extends: [
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue",
@@ -12,5 +14,6 @@ module.exports = {
     "value-keyword-case": null,
     "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
     "selector-id-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+    "prettier/prettier": true,
   },
 };
