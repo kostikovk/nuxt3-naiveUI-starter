@@ -53,17 +53,6 @@ git push -u origin main
 }
 ```
 
-```json
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
-  "eslint.validate": ["{**/*, *}.{js, ts, jsx, tsx, html, vue}"],
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"]
-}
-```
-
 ## Tools and commands:
 
 1. **ESLint**
