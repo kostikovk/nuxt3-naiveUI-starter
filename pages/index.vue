@@ -1,34 +1,34 @@
 <template>
-  <n-space
+  <NSpace
     vertical
     size="large"
   >
     <section>
-      <n-h1 prefix="bar">
-        <n-text type="primary"> Nuxt 3 + NaiveUI Starter </n-text>
-      </n-h1>
+      <NH1 prefix="bar">
+        <NText type="primary"> Nuxt 3 + NaiveUI Starter </NText>
+      </NH1>
 
-      <n-p>
+      <NP>
         Starter kit for developing projects with
-        <n-text type="primary"> Nuxt 3 </n-text>
+        <NText type="primary"> Nuxt 3 </NText>
         and
-        <n-text type="primary"> NaiveUI </n-text>
-      </n-p>
+        <NText type="primary"> NaiveUI </NText>
+      </NP>
 
-      <n-h2>
-        <n-text type="primary"> Tools: </n-text>
-      </n-h2>
+      <NH2>
+        <NText type="primary"> Tools: </NText>
+      </NH2>
 
-      <n-ol>
-        <n-li
+      <NOl>
+        <NLi
           v-for="tool in tools"
           :key="tool"
         >
-          <n-text>{{ tool }}</n-text>
-        </n-li>
-      </n-ol>
+          <NText>{{ tool }}</NText>
+        </NLi>
+      </NOl>
     </section>
-  </n-space>
+  </NSpace>
 </template>
 
 <script setup lang="ts">

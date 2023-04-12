@@ -1,26 +1,26 @@
 <template>
-  <n-layout-footer bordered>
+  <NLayoutFooter bordered>
     <div class="container">
-      <n-p>
+      <NP>
         Made with
-        <n-text type="error"> ♥ </n-text>
+        <NText type="error"> ♥ </NText>
         by KosKosovuch using
-        <n-a
+        <NA
           href="https://nuxt.com/"
           target="_blank"
         >
           Nuxt 3
-        </n-a>
+        </NA>
         +
-        <n-a
+        <NA
           href="https://www.naiveui.com"
           target="_blank"
         >
           NaiveUI
-        </n-a>
-      </n-p>
+        </NA>
+      </NP>
     </div>
-  </n-layout-footer>
+  </NLayoutFooter>
 </template>
 
 <script setup lang="ts">

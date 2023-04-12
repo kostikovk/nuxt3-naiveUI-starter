@@ -1,18 +1,18 @@
 <template>
-  <n-layout
+  <NLayout
     class="root-layout"
     position="absolute"
   >
-    <the-header />
+    <TheHeader />
 
-    <n-layout-content>
+    <NLayoutContent>
       <div class="container p-y">
         <slot name="default" />
       </div>
-    </n-layout-content>
+    </NLayoutContent>
 
-    <the-footer />
-  </n-layout>
+    <TheFooter />
+  </NLayout>
 </template>
 
 <script setup lang="ts">

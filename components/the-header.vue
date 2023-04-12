@@ -1,51 +1,50 @@
 <template>
-  <n-layout-header bordered>
+  <NLayoutHeader bordered>
     <div class="container">
-      <n-space
+      <NSpace
         align="center"
         justify="space-between"
       >
-        <n-menu
+        <NMenu
           :value="fullPath"
-          mode="horizontal"
           :options="menuOptions"
+          mode="horizontal"
         />
 
-        <n-space align="center">
+        <NSpace align="center">
           <!-- Theme Switcher -->
-          <n-switch
+          <NSwitch
             :round="false"
             :value="isDark"
             @update-value="toggleTheme"
           >
             <template #checked-icon>
-              <n-icon :component="MoonOutlineIcon" />
+              <NIcon :component="MoonOutlineIcon" />
             </template>
             <template #unchecked-icon>
-              <n-icon :component="SunnyOutlineIcon" />
+              <NIcon :component="SunnyOutlineIcon" />
             </template>
-          </n-switch>
+          </NSwitch>
 
-          <!-- Github -->
-          <n-a
+          <NA
             href="https://github.com/KosKosovuch/nuxt3-naiveUI-starter"
             target="blank"
           >
-            <n-button
+            <NButton
               type="primary"
               quaternary
               circle
               size="large"
             >
-              <n-icon size="large">
-                <logo-github-icon />
-              </n-icon>
-            </n-button>
-          </n-a>
-        </n-space>
-      </n-space>
+              <NIcon size="large">
+                <LogoGithubIcon />
+              </NIcon>
+            </NButton>
+          </NA>
+        </NSpace>
+      </NSpace>
     </div>
-  </n-layout-header>
+  </NLayoutHeader>
 </template>
 
 <script setup lang="ts">

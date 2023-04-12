@@ -1,276 +1,276 @@
 <template>
-  <n-h2>
-    <n-text type="info"> Typography </n-text>
-  </n-h2>
+  <NH2>
+    <NText type="info"> Typography </NText>
+  </NH2>
 
-  <n-divider />
-  <n-h3>
-    <n-text type="info"> Headings </n-text>
-  </n-h3>
+  <NDivider />
+  <NH3>
+    <NText type="info"> Headings </NText>
+  </NH3>
 
   <div style="position: relative; padding-left: 24px">
     <div
       style="position: absolute; top: 0; bottom: 0; left: 0; width: 24px; background-color: rgb(128 128 128 / 50%)"
     />
-    <n-h1>
-      <n-text type="primary"> sin(x) </n-text>
-    </n-h1>
-    <n-h1 prefix="bar">
-      <n-text type="primary"> sin(x) </n-text>
-    </n-h1>
-    <n-h1
+    <NH1>
+      <NText type="primary"> sin(x) </NText>
+    </NH1>
+    <NH1 prefix="bar">
+      <NText type="primary"> sin(x) </NText>
+    </NH1>
+    <NH1
       prefix="bar"
       align-text
     >
-      <n-text type="primary"> sin(x) </n-text>
-    </n-h1>
-    <n-h1
+      <NText type="primary"> sin(x) </NText>
+    </NH1>
+    <NH1
       prefix="bar"
       align-text
       type="success"
     >
-      <n-text type="success"> sin(x) </n-text>
-    </n-h1>
-    <n-h1
+      <NText type="success"> sin(x) </NText>
+    </NH1>
+    <NH1
       prefix="bar"
       align-text
       type="info"
     >
-      <n-text type="info"> sin(x) </n-text>
-    </n-h1>
-    <n-h1
+      <NText type="info"> sin(x) </NText>
+    </NH1>
+    <NH1
       prefix="bar"
       align-text
       type="warning"
     >
-      <n-text type="warning"> sin(x) </n-text>
-    </n-h1>
-    <n-h1
+      <NText type="warning"> sin(x) </NText>
+    </NH1>
+    <NH1
       prefix="bar"
       align-text
       type="error"
     >
-      <n-text type="error"> sin(x) </n-text>
-    </n-h1>
+      <NText type="error"> sin(x) </NText>
+    </NH1>
 
-    <n-h2>cos(x)</n-h2>
-    <n-h2 prefix="bar"> cos(x) </n-h2>
-    <n-h2
+    <NH2>cos(x)</NH2>
+    <NH2 prefix="bar"> cos(x) </NH2>
+    <NH2
       prefix="bar"
       align-text
     >
       cos(x)
-    </n-h2>
-    <n-h3>-sin(x)</n-h3>
-    <n-h3 prefix="bar"> -sin(x) </n-h3>
-    <n-h3
+    </NH2>
+    <NH3>-sin(x)</NH3>
+    <NH3 prefix="bar"> -sin(x) </NH3>
+    <NH3
       prefix="bar"
       align-text
     >
       -sin(x)
-    </n-h3>
-    <n-h4>-cos(x)</n-h4>
-    <n-h4 prefix="bar"> -cos(x) </n-h4>
-    <n-h4
+    </NH3>
+    <NH4>-cos(x)</NH4>
+    <NH4 prefix="bar"> -cos(x) </NH4>
+    <NH4
       prefix="bar"
       align-text
     >
       -cos(x)
-    </n-h4>
-    <n-h5>sin(x)</n-h5>
-    <n-h5 prefix="bar"> sin(x) </n-h5>
-    <n-h5
+    </NH4>
+    <NH5>sin(x)</NH5>
+    <NH5 prefix="bar"> sin(x) </NH5>
+    <NH5
       prefix="bar"
       align-text
     >
       sin(x)
-    </n-h5>
-    <n-h6>What a loop!</n-h6>
-    <n-h6 prefix="bar"> What a loop! </n-h6>
-    <n-h6
+    </NH5>
+    <NH6>What a loop!</NH6>
+    <NH6 prefix="bar"> What a loop! </NH6>
+    <NH6
       prefix="bar"
       align-text
     >
       What a loop!
-    </n-h6>
+    </NH6>
   </div>
 
-  <n-divider />
+  <NDivider />
 
-  <n-h3>
-    <n-text type="info"> Tags </n-text>
-  </n-h3>
+  <NH3>
+    <NText type="info"> Tags </NText>
+  </NH3>
 
-  <n-a
+  <NA
     href="https://en.wikipedia.org/wiki/Hear_the_Wind_Sing"
     target="_blank"
   >
     Hear the Wind Sing
-  </n-a>
-  <n-h1>h1 tag</n-h1>
-  <n-p>
+  </NA>
+  <NH1>h1 tag</NH1>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-h2>h2 tag</n-h2>
-  <n-p>
+  </NP>
+  <NH2>h2 tag</NH2>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-h3>h3 tag</n-h3>
-  <n-p>
+  </NP>
+  <NH3>h3 tag</NH3>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-h4>h4 tag</n-h4>
-  <n-p>
+  </NP>
+  <NH4>h4 tag</NH4>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-h5>h5 tag</n-h5>
-  <n-p>
+  </NP>
+  <NH5>h5 tag</NH5>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-h6>h6 tag</n-h6>
-  <n-p>
+  </NP>
+  <NH6>h6 tag</NH6>
+  <NP>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-p>
-  <n-ul>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-  </n-ul>
-  <n-hr />
-  <n-ol>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-  </n-ol>
-  <n-ul align-text>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-  </n-ul>
-  <n-hr />
-  <n-ol align-text>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-    <n-li>li tag</n-li>
-  </n-ol>
-  <n-blockquote>
+  </NP>
+  <NUl>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+  </NUl>
+  <NHr />
+  <NOl>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+  </NOl>
+  <NUl align-text>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+  </NUl>
+  <NHr />
+  <NOl align-text>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+    <NLi>li tag</NLi>
+  </NOl>
+  <NBlockquote>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-blockquote>
-  <n-blockquote align-text>
+  </NBlockquote>
+  <NBlockquote align-text>
     Hear the Wind Sing (風の歌を聴け Kaze no uta o kike) is the first novel by Japanese writer Haruki Murakami. It first
     appeared in the June 1979 issue of Gunzo (one of the most influential literary magazines in Japan), and in book form
     the next month. The novel was adapted by Japanese director Kazuki Ōmori in a 1981 film distributed by Art Theatre
     Guild. An English translation by Alfred Birnbaum appeared in 1987.
-  </n-blockquote>
+  </NBlockquote>
 
-  <n-divider />
+  <NDivider />
 
-  <n-h3>
-    <n-text type="info"> Text </n-text>
-  </n-h3>
+  <NH3>
+    <NText type="info"> Text </NText>
+  </NH3>
 
   <div>
-    <n-text type="info"> Info </n-text>
-    <n-text type="success"> Success </n-text>
-    <n-text type="warning"> Warning </n-text>
-    <n-text type="error"> Error </n-text> <n-text strong> Strong </n-text> <n-text italic> Italic </n-text>
-    <n-text underline> Underline </n-text> <n-text delete> Delete </n-text> <n-text code> Code </n-text>
-    <n-text
+    <NText type="info"> Info </NText>
+    <NText type="success"> Success </NText>
+    <NText type="warning"> Warning </NText>
+    <NText type="error"> Error </NText> <NText strong> Strong </NText> <NText italic> Italic </NText>
+    <NText underline> Underline </NText> <NText delete> Delete </NText> <NText code> Code </NText>
+    <NText
       code
       delete
     >
       Code
-    </n-text>
-    <n-text depth="1"> Primary Depth </n-text>
-    <n-text depth="2"> Secondary Depth </n-text>
-    <n-text depth="3"> Tertiary Depth </n-text>
-    <n-text tag="div"> As Div </n-text>
+    </NText>
+    <NText depth="1"> Primary Depth </NText>
+    <NText depth="2"> Secondary Depth </NText>
+    <NText depth="3"> Tertiary Depth </NText>
+    <NText tag="div"> As Div </NText>
   </div>
 
-  <n-divider />
+  <NDivider />
 
-  <n-h3>
-    <n-text type="info">
+  <NH3>
+    <NText type="info">
       Use
-      <n-text code> n-a </n-text>
+      <NText code> n-a </NText>
       with
-      <n-text code> router-link </n-text>
-    </n-text>
-  </n-h3>
-  <router-link
+      <NText code> router-link </NText>
+    </NText>
+  </NH3>
+  <RouterLink
     to="/"
     #="{ navigate, href }"
     custom
   >
-    <n-a
+    <NA
       :href="href"
       @click="navigate"
     >
       Back Home
-    </n-a>
-  </router-link>
+    </NA>
+  </RouterLink>
 
-  <n-divider />
+  <NDivider />
 
-  <n-h3>
-    <n-text type="warning">
+  <NH3>
+    <NText type="warning">
       Use
-      <n-text code> n-a </n-text>
+      <NText code> n-a </NText>
       with
-      <n-text code> nuxt-link </n-text>
-    </n-text>
-  </n-h3>
-  <n-text
+      <NText code> nuxt-link </NText>
+    </NText>
+  </NH3>
+  <NText
     tag="div"
     type="warning"
   >
     Issue with the nuxt link
-  </n-text>
-  <n-text
+  </NText>
+  <NText
     tag="div"
     code
   >
     [Vue warn]: Extraneous non-props attributes (rel) were passed to component but could not be automatically inherited
     because component renders fragment or text root nodes.
-  </n-text>
+  </NText>
 
   <div>
-    <n-a href="https://github.com/vuejs/core/issues/5933"> Vue issue! Maybe it's related </n-a>
+    <NA href="https://github.com/vuejs/core/issues/5933"> Vue issue! Maybe it's related </NA>
   </div>
 
-  <nuxt-link
+  <NuxtLink
     to="/"
     #="{ navigate, href }"
     custom
   >
-    <n-a
+    <NA
       :href="href"
       @click="navigate"
     >
       Back Home
-    </n-a>
-  </nuxt-link>
+    </NA>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">

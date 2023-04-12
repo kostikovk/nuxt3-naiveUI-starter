@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     'prettier/prettier': [2],
     'vue/no-multiple-template-root': 0,
-    'vue/component-name-in-template-casing': [2, 'kebab-case']
+    'vue/component-name-in-template-casing': [2, 'PascalCase', { registeredComponentsOnly: false }]
   },
 
   overrides: [
