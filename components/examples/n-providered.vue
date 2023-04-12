@@ -1,14 +1,14 @@
 <template>
-  <n-h2>
-    <n-text type="info"> Provider Components </n-text>
-  </n-h2>
+  <NH2>
+    <NText type="info"> Provider Components </NText>
+  </NH2>
 
-  <n-space>
-    <n-button @click="cbInfo"> useMessage </n-button>
-    <n-button @click="cbNotification"> useNotification </n-button>
-    <n-button @click="cbDialog"> useDialog </n-button>
-    <n-button @click="cbLoadingBar"> useLoadingBar </n-button>
-  </n-space>
+  <NSpace>
+    <NButton @click="cbInfo"> useMessage </NButton>
+    <NButton @click="cbNotification"> useNotification </NButton>
+    <NButton @click="cbDialog"> useDialog </NButton>
+    <NButton @click="cbLoadingBar"> useLoadingBar </NButton>
+  </NSpace>
 </template>
 
 <script lang="ts" setup>

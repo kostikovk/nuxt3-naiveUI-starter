@@ -5,6 +5,11 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineNuxtConfig({
+  // https://github.com/nuxt/nuxt/issues/20211
+  experimental: {
+    renderJsonPayloads: true
+  },
+
   typescript: {
     strict: true
   },

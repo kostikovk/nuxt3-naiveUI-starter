@@ -1,10 +1,10 @@
 <template>
   <div>
-    <n-h1>
-      <n-text type="primary"> Naive UI </n-text>
-    </n-h1>
-    <n-typo />
-    <n-providered />
+    <NH1>
+      <NText type="primary"> Naive UI </NText>
+    </NH1>
+    <NTypo />
+    <NProvidered />
   </div>
 </template>
 
