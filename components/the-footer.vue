@@ -2,9 +2,6 @@
   <NLayoutFooter bordered>
     <div class="container">
       <NP>
-        Made with
-        <NText type="error"> ♥ </NText>
-        by KosKosovuch using
         <NA
           href="https://nuxt.com/"
           target="_blank"
@@ -24,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-  import { NText, NP, NLayoutFooter, NA } from 'naive-ui'
+  import { NP, NLayoutFooter, NA } from 'naive-ui'
 </script>
 
 <style lang="scss" scoped>
