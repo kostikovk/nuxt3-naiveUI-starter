@@ -30,5 +30,10 @@ module.exports = {
         'vue/no-multiple-template-root': 2
       }
     }
-  ]
+  ],
+
+  globals: {
+    defineStore: true,
+    storeToRefs: true
+  }
 }
