@@ -1,7 +1,10 @@
 <template>
   <AppProviders v-bind="configProviderProps">
     <NGlobalStyle />
+
     <NuxtLayout name="default">
+      <CounterStore />
+
       <NuxtPage />
     </NuxtLayout>
   </AppProviders>
@@ -11,6 +14,7 @@
   import { NGlobalStyle, ConfigProviderProps } from 'naive-ui'
   import AppProviders from '~~/components/functional/app-providers'
   import { useTheme } from '~~/composables/useTheme'
+  import CounterStore from '~/components/examples/counter-store.vue'
 
   useHead({ title: 'Nuxt 3 + NaiveUI Starter' })
 
