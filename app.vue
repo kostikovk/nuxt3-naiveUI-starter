@@ -1,9 +1,7 @@
 <template>
   <AppProviders v-bind="configProviderProps">
     <NGlobalStyle />
-
     <NuxtLayout name="default">
-      {{ isDark }}
       <NuxtPage />
     </NuxtLayout>
   </AppProviders>
@@ -16,7 +14,7 @@
 
   useHead({ title: 'Nuxt 3 + NaiveUI Starter' })
 
-  const { naiveTheme, isDark } = useTheme()
+  const { naiveTheme } = useTheme()
   const configProviderProps = computed<ConfigProviderProps>(() => ({
     inlineThemeDisabled: true,
     theme: naiveTheme.value
