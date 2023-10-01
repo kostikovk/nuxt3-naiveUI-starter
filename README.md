@@ -40,19 +40,6 @@ git remote add origin ...
 git push -u origin main
 ```
 
-## VSCode `.vscode/settings.json`
-
-```json
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
-  "eslint.validate": ["{**/*, *}.{js, ts, jsx, tsx, html, vue}"],
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"]
-}
-```
-
 ## Tools and commands:
 
 1. **ESLint**
