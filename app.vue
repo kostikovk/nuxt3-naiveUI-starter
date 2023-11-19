@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-  import { NGlobalStyle, ConfigProviderProps, NSpace } from 'naive-ui'
+  import { NGlobalStyle, type ConfigProviderProps, NSpace } from 'naive-ui'
   import AppProviders from '~~/components/functional/app-providers'
   import { useTheme } from '~~/composables/useTheme'
   import CounterStore from '~/components/examples/counter-store.vue'
