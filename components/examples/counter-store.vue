@@ -10,6 +10,6 @@
     round
     @click="counterStore.increment"
   >
-    Store count value: {{ counterStore.count }}
+    State management pinia: {{ counterStore.count }}
   </NButton>
 </template>

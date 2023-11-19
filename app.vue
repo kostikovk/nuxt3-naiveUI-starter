@@ -3,15 +3,20 @@
     <NGlobalStyle />
 
     <NuxtLayout name="default">
-      <CounterStore />
+      <NSpace
+        vertical
+        size="large"
+      >
+        <CounterStore />
 
-      <NuxtPage />
+        <NuxtPage />
+      </NSpace>
     </NuxtLayout>
   </AppProviders>
 </template>
 
 <script setup lang="ts">
-  import { NGlobalStyle, ConfigProviderProps } from 'naive-ui'
+  import { NGlobalStyle, ConfigProviderProps, NSpace } from 'naive-ui'
   import AppProviders from '~~/components/functional/app-providers'
   import { useTheme } from '~~/composables/useTheme'
   import CounterStore from '~/components/examples/counter-store.vue'

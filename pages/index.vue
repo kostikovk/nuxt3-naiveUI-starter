@@ -34,5 +34,5 @@
 <script setup lang="ts">
   import { NH1, NH2, NText, NP, NSpace, NOl, NLi } from 'naive-ui'
 
-  const tools = ['ESLint', 'Stylelint', 'Prettier', 'Husky', 'Lint-staged']
+  const tools = ['ESLint', 'Stylelint', 'Prettier', 'Husky', 'Lint-staged', 'Pinia']
 </script>
