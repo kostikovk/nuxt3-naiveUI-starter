@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
 
   pinia: {
-    autoImports: ['defineStore', 'storeToRefs']
+    storesDirs: ['./store/modules']
   },
 
   // https://github.com/nuxt/nuxt/issues/20211
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   // https://nuxt.com/docs/api/configuration/nuxt-config#vite
   vite: {
     optimizeDeps: {
-      include: isDev ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone'] : []
+      include: isDev ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone'] : []
     },
 
     css: {

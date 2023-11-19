@@ -1,11 +1,11 @@
-import { h, FunctionalComponent } from 'vue'
+import { h, type FunctionalComponent } from 'vue'
 import {
   NConfigProvider,
   NMessageProvider,
   NNotificationProvider,
   NDialogProvider,
   NLoadingBarProvider,
-  ConfigProviderProps
+  type ConfigProviderProps
 } from 'naive-ui'
 
 const AppProviders: FunctionalComponent<ConfigProviderProps> = (props, { slots }) => {
