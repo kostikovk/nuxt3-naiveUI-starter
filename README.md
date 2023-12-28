@@ -4,42 +4,6 @@
 
 Look at the [Nuxt 3](https://nuxt.com/docs/getting-started/introduction) and [Naive UI](https://www.naiveui.com/en-US/dark/docs/introduction) documentation to learn more.
 
-## Setup
-
-```bash
-# 1. clone repo
-git clone https://github.com/KosKosovuch/nuxt3-naiveUI-starter.git
-
-# 2. Rename folder
-mv nuxt3-naiveUI-starter my-project
-
-# 3. Go to folder
-cd my-project
-
-# 4. remove .git
-rm -rf .git
-
-# 5. Init git
-git init
-
-# 6. Use node version. If you don't have it, install it https://github.com/nvm-sh/nvm
-nvm use
-
-# 7. install dependencies
-npm i
-
-# 8. Change branch
-git branch -M main
-
-# 9. Add first commit
-git add .
-git commit -m "init project"
-
-# 10. Add remote and push
-git remote add origin ...
-git push -u origin main
-```
-
 ## Tools and commands:
 
 1. **ESLint**
@@ -139,46 +103,12 @@ npm run lint:fix
 </template>
 ```
 
-3. **Theming**
-
-```ts
-// composables/useTheme.ts
-```
-
-```html
-<!-- app.vue -->
-<template>
-  <app-providers :config-provider="configProvider">
-    <n-global-style />
-
-    <nuxt-layout name="default">
-      <nuxt-page />
-    </nuxt-layout>
-  </app-providers>
-</template>
-
-<script
-  setup
-  lang="ts"
->
-  import { NGlobalStyle, ConfigProviderProps } from 'naive-ui'
-  import AppProviders from '~~/components/functional/AppProviders'
-  import { useTheme } from '~~/composables/useTheme'
-
-  const { naiveTheme } = useTheme()
-  const configProvider = computed<ConfigProviderProps>(() => ({
-    inlineThemeDisabled: true,
-    theme: naiveTheme.value
-  }))
-</script>
-```
-
 ## Development Server
 
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Production
@@ -186,13 +116,13 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+yarm build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
