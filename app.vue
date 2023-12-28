@@ -25,7 +25,6 @@
 
   const { naiveTheme } = useTheme()
   const configProviderProps = computed<ConfigProviderProps>(() => ({
-    inlineThemeDisabled: true,
     theme: naiveTheme.value
   }))
 </script>
